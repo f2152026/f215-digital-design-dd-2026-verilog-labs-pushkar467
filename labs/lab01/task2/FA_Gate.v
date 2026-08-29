@@ -24,6 +24,7 @@ module FA_Gate(
   output sum,
   output cout
 );
+
   wire ps, pc1, pc2;
 
   xor #(2,3) (ps,   a,   b);
@@ -31,6 +32,7 @@ module FA_Gate(
   xor #(2,3) (sum,  cin, ps);
   and #(2,3) (pc2,  cin, ps);
   or  #(2,3) (cout, pc1, pc2);
-  
 
 endmodule
+
+
